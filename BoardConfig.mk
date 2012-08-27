@@ -26,4 +26,4 @@ TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
 #TARGET_KERNEL_CONFIG := kernel_n8000_defconfig
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := c0,n8013,GT-N8013
+TARGET_OTA_ASSERT_DEVICE := c0,p4notewifi,n8013,GT-N8013
