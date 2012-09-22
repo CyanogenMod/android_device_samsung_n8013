@@ -19,11 +19,11 @@
 
 # Inline kernel building
 #FIXME NOT READY YET - NEEDS DEFCONFIG
-TARGET_KERNEL_SOURCE := kernel/samsung/n8000
-TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
+#TARGET_KERNEL_SOURCE := kernel/samsung/n8000
+#TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
 
-#TARGET_KERNEL_SOURCE := kernel/samsung/kernel_n8000_ics
-#TARGET_KERNEL_CONFIG := kernel_n8000_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
+TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := c0,p4notewifi,n8013,GT-N8013
