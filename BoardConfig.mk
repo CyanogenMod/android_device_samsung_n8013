@@ -27,3 +27,6 @@ TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := c0,p4notewifi,n8013,GT-N8013
+
+#Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n8013/bluetooth
