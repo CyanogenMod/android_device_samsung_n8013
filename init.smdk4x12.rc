@@ -112,6 +112,10 @@ on post-fs-data
     chmod 0660 /sys/class/sec/led/led_fade
     chown system system /sys/class/sec/led/led_fade
 
+# IR_LED
+    chown system radio /sys/class/sec/sec_ir/ir_send
+    chown system radio /sys/class/sec/sec_ir/ir_send_result
+
 # Touchkey
     chmod 0660 /sys/class/sec/sec_touchkey/timeout
     chown system system /sys/class/sec/sec_touchkey/timeout
