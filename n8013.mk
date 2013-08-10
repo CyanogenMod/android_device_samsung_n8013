@@ -21,11 +21,17 @@ LOCAL_PATH := device/samsung/n8013
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 
+# Rootdir
+PRODUCT_COPY_FILES += \
+    device/samsung/n8013/rootdir/init.target.rc:root/init.target.rc
+
+# Audio
+PRODUCT_COPY_FILES += \
+    device/samsung/n80xx-common/configs/tiny_hw.xml:system/etc/sound/GT-N8013
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    device/samsung/n8013/init.smdk4x12.rc:root/init.smdk4x12.rc \
-    device/samsung/n80xx-common/configs/tiny_hw.xml:system/etc/sound/GT-N8013
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Gps
 PRODUCT_COPY_FILES += \
