@@ -33,7 +33,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n8013/bluetooth
 
 # Selinux
 BOARD_SEPOLICY_DIRS := \
-    device/samsung/n801x/selinux
+    device/samsung/n8013/selinux
 
 BOARD_SEPOLICY_UNION := \
     device.te \
