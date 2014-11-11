@@ -18,10 +18,6 @@
 -include device/samsung/n80xx-common/BoardConfigCommon.mk
 
 # Inline kernel building
-#FIXME NOT READY YET - NEEDS DEFCONFIG
-#TARGET_KERNEL_SOURCE := kernel/samsung/n8000
-#TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
-
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 TARGET_KERNEL_CONFIG := cyanogenmod_n8013_defconfig
 
@@ -45,4 +41,5 @@ BOARD_SEPOLICY_UNION := \
     rild.te \
     system.te \
     ueventd.te \
+    vold.te \
     wpa_supplicant.te
