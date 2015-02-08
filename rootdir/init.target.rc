@@ -33,8 +33,3 @@ service dmb /system/bin/dmbserver
 #     class main
 #     user system
 #     group graphics
-
-service SecTVOutService /system/bin/TVOutDummy
-    class main
-    group graphics
-    oneshot
