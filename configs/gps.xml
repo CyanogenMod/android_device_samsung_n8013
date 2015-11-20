@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<glgps xmlns="http://www.glpals.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.glpals.com/glconfig.xsd" >
+<glgps xmlns="http://www.glpals.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.glpals.com/ glconfig.xsd" >
   <!--HAL Confguration  -->
   <hal
        acPortName="/dev/ttySAC1"
@@ -7,18 +7,12 @@
        gpioNStdbyPath="/sys/class/sec/gps/GPS_PWR_EN/value"
        gpioNResetPath="/sys/class/sec/gps/GPS_nRST/value"
        gpioDelayMs="250"
-       acNvStoDir="/data/"
-       FactoryTestFilePath="/data/"
+       acNvStoDir="/data/gps/"
 
-       acLogDirectory="/sdcard/gps/broadcom/"
+       acLogDirectory="/data/gps/log/"
 
-       TISEnabled="false"
        LPmode="false"
-       cp-cold-start="false"
-       cp-guard-time-sec="1"
-
        ReAidingType="0"
-
        arp-supl-enable="false"
        arp-supl-cap-msb="false"
        arp-supl-cap-msa="false"
@@ -33,10 +27,9 @@
        SuplUT2Seconds="20"
        SuplUT3Seconds="20"
        SuplVersion="1"
-
        LbsEnable="false"
        LbsLocal="false"
-       LbsServer="gllto.glpals.com/7day/glo/v2/latest/"
+       LbsServer="BCMLS2.glpals.com"
        LbsPort="7275"
        LbsSyncLto="false"
        SyncLto="true"
@@ -44,12 +37,12 @@
        acLtoDir="/data/gps/"
        LbsSyncLtoThresholdDays="1"
        LbsTAC="10101222"
+       ctrlPipe="/data/gps/glgpsctrl"
        LbsWlanEnable="false"
-       
-       AssertEnabled="false"
-       
+       SensorsEnable="false"
+       SensorsPowerSave="false"
+       SensorsLog="false"
    />
-
   <gll
        LogPriMask="LOG_INFO"
        LogFacMask="LOG_GLLAPI | LOG_NMEA | LOG_RAWDATA"
@@ -63,5 +56,4 @@
        EnableLowPowerEls="false"
        EnableLowPowerPmm="true"
    />
-
 </glgps>
