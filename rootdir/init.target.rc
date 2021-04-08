@@ -6,6 +6,9 @@ on post-fs-data
     # make param block device link for SysScope
     symlink /dev/block/mmcblk0p4 /dev/block/param
 
+    # Restorecon
+    restorecon_recursive /efs
+
 on boot
     setprop ro.radio.noril yes
 
@@ -17,12 +20,13 @@ service icd /system/bin/icd
     onrestart exec icd_check
 
 # GPS
-service gpsd /system/bin/logwrapper /system/bin/gpsd -c /system/etc/gps.xml
+service gpsd /system/bin/gpsd -c /system/etc/gps.xml
     class main
     socket gps seqpacket 0660 gps system
     user gps
     group system inet sdcard_rw
-
+    seclabel u:r:gpsd:s0
+    
 service dmb /system/bin/dmbserver
     class main
     user system
@@ -33,8 +37,3 @@ service dmb /system/bin/dmbserver
 #     class main
 #     user system
 #     group graphics
-
-service SecTVOutService /system/bin/TVOutDummy
-    class main
-    group graphics
-    oneshot

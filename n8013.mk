@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/n80xx-common/n80xx-common.mk)
-
 LOCAL_PATH := device/samsung/n8013
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -25,9 +23,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     device/samsung/n8013/rootdir/init.target.rc:root/init.target.rc
 
-# Audio
-PRODUCT_COPY_FILES += \
-    device/samsung/n80xx-common/configs/tiny_hw.xml:system/etc/sound/GT-N8013
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -37,3 +32,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/n8013/configs/gps.conf:system/etc/gps.conf \
     device/samsung/n8013/configs/gps.xml:system/etc/gps.xml
+
+$(call inherit-product, device/samsung/n80xx-common/n80xx-common.mk)
